@@ -111,6 +111,7 @@ class CategoryController extends Controller
         $categories->name_cat = $request->input('name');
         $categories->description_cat = $request->input('description_cat');
         $categories->save();
+        ////kjjksjkcdajnjhakjka
 
         return redirect('/category/list');
     }
