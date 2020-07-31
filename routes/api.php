@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('lecturas', 'LecturasController@index');
+Route::get('lecturas', 'Api\LecturasController@index');
