@@ -14,9 +14,12 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
+            $table->increments('id');
             $table->string('name');
             $table->string('lastname');
+            $table->date('birthday')->nullable();
+            $table->string('phone')->unique()->nullable();
             $table->string('NoControl')->unique();
             $table->string('email')->unique();
             $table->boolean('admin')->default(false);
@@ -24,6 +27,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            // $table->unsignedInteger('career_id')->nullable();
+            // $table->foreign('career_id')->references('id')->on('careers');
         });
     }
 

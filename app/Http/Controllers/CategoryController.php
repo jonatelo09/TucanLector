@@ -52,11 +52,11 @@ class CategoryController extends Controller
 
         $categories = new Category();
 
-        $categories->name_cat = $request->input('name');
-        $categories->description_cat = $request->input('description');
+        $categories->name_cat = $request->input('name_cat');
+        $categories->description_cat = $request->input('description_cat');
         $categories->save();
 
-        return redirect('categoriesL');
+        return redirect('/categories/list');
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
         $categories = Category::find($id);
 
@@ -78,10 +78,11 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
+        $categories = Category::find($id);
 
-        return view('categories.show_category')->with(compact('category'));
+        return view('categories.edit_category')->with(compact('categories'));
     }
 
     /**
@@ -108,10 +109,9 @@ class CategoryController extends Controller
 
         $categories = Category::find($id);
 
-        $categories->name_cat = $request->input('name');
+        $categories->name_cat = $request->input('name_cat');
         $categories->description_cat = $request->input('description_cat');
         $categories->save();
-        ////kjjksjkcdajnjhakjka
 
         return redirect('/category/list');
     }

@@ -20,7 +20,7 @@
                                 @foreach ($errors->all() as $error)
                                     <li>{{$error}}</li>
                                 @endforeach
-                                </ul>
+       2                         </ul>
                             </div>
                             @endif
                             <form class="user" method="POST" action="{{ route('categories') }}">

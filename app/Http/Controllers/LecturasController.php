@@ -15,8 +15,9 @@ class LecturasController extends Controller
      */
     public function index()
     {
-        $readings = Reading::paginate(10);
-        return view('readings.list_readings')->with(compact('readings'));
+        return Reading::all();
+        // $readings = Reading::paginate(10);
+        // return view('readings.list_readings')->with(compact('readings'));
     }
 
     /**

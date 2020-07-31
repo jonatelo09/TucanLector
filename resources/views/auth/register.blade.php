@@ -30,7 +30,7 @@
                                 @enderror
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" name="lastname" class="form-control form-control-user" id="exampleLastName" placeholder="Apellido" name="lastName" value="{{ old('lastName') }}" required>
+                                <input type="text" name="lastname" class="form-control form-control-user" id="exampleLastName" placeholder="Apellidos" name="lastName" value="{{ old('lastName') }}" required>
                                 @error('lastName')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -45,6 +45,20 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select custom-select-lg" required>
+                              <option selected>Selecciona tu carrera</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            {{-- <input type="text" class="form-control form-control-user @error('NoControl') is-invalid @enderror" id="NoControl" placeholder="Numero de Control" name="NoControl" value="{{ old('NoControl') }}" required autocomplete="NoControl">
+                            @error('NoControl')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" id="exampleInputEmail" placeholder="Correo Electronico" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -69,13 +83,13 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-user btn-block">Crear Cuenta</button>
-                        <hr>
+                        {{-- <hr>
                         <a href="index.html" class="btn btn-google btn-user btn-block">
                             <i class="fab fa-google fa-fw"></i> Registrarse con Google
                         </a>
                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
                             <i class="fab fa-facebook-f fa-fw"></i> Registrarse con Facebook
-                        </a>
+                        </a> --}}
                     </form>
                     <hr>
                     <div class="text-center">

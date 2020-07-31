@@ -48,14 +48,14 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Iniciar Sesión
-                                </button>
+                                </button>{{-- 
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Iniciar Sesión con Google
                                 </a>
                                 <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i> Iniciar Sesión con Facebook
-                                </a>
+                                </a> --}}
                             </form>
                             <hr>
                             <div class="text-center">

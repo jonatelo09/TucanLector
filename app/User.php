@@ -37,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // un alumno solo puede tener una carrera
+    public function career()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

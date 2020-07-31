@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -45,3 +46,6 @@ Route::get('/categories/{id}/show', 'CategoryController@show');
 Route::get('/categories/{id}/edit', 'CategoryController@edit'); //Editar lectura
 Route::post('/categories/{id}/update', 'CategoryController@update'); //Actualizar lectura
 Route::post('/categories/{id}/delete', 'CategoryController@destroy');  // Eliminar lectura
+
+// Users
+Route::get('/profile', 'UserController@profile')->name('profile');
